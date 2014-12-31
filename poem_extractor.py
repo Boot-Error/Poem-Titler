@@ -8,8 +8,6 @@ def make_title(query, debug=False):
 	matches = re.findall('[a-zA-Z]+', query)
 	refined = [match.lower() for match in matches]
 
-	print set(refined)
-
 	result = []
 
 	#Get its synonyms
@@ -17,9 +15,8 @@ def make_title(query, debug=False):
 		try:
 			result += synonyms.get_synonyms(word)
 		except:
+			print 'Ignored : {}'.format(word)
 			continue
-		if debug:
-			print 'query : {query} \n result : {result}\n\n'.format(query=word, result=result)
 
 	maxcounted_words = []
 	maxcount   = 0

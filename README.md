@@ -1,7 +1,7 @@
 Poem-Titler
 ===========
 
-Generates peom titles by relating words in the peom with synonyms and giving the possible matches.
+Generates peom titles by relating words in the poem with synonyms and giving the possible matches.
 
 ```sh
 $ pip install -r requirements.txt
